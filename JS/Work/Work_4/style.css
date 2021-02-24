@@ -1,0 +1,21 @@
+.wrapper{
+    width: 70%;
+    border: dashed 1px gray;
+    border-radius: 15px;
+    margin: auto;
+    padding: 15px;
+}
+
+li{
+    margin-bottom: 30px;
+}
+
+.clock{
+    width: 60%;
+    margin: auto;
+    border: dashed;
+    border-radius: 20px;
+    padding: 15px;
+    font-size: 50px;
+    text-align: center;
+}

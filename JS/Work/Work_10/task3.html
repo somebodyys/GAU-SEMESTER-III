@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #wrapper {
+            margin: auto;
+            border: solid 1px black;
+            width: 1000px;
+            height: 800px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        #display {
+            width: 800px;
+            height: 500px;
+            border: solid 1px black;
+        }
+
+        #display img {
+            width: inherit;
+            height: inherit;
+        }
+
+        #prev {
+            width: 800px;
+            height: 100px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .items {
+            width: 150px;
+            height: 100px;
+
+
+        }
+
+        .items img {
+            width: 150px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="wrapper">
+        <h3>ავტომატური სლაიდერი</h3>
+        <div id="display">
+
+        </div>
+        <div id="prev">
+            <div class="items">
+                <img src="images/Analogy1.jpg" alt="">
+            </div>
+            <div class="items">
+                <img src="images/hatrabbits-fishing.jpg" alt="">
+            </div>
+            <div class="items">
+                <img src="images/random.jpg" alt="">
+            </div>
+            <div class="items">
+                <img src="images/rare-combinaties.jpg" alt="">
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        var myItems = document.getElementsByClassName("items")
+        var index = 0;
+        for (let i = 0; i < myItems.length; i++) {
+            myItems[i].addEventListener('mouseover', function () {
+                document.getElementById("display").innerHTML = this.innerHTML
+                for (let i = 0; i < myItems.length; i++) {
+                    myItems[i].style.border = "none"
+                    if(this == myItems[i]){
+                        index = i;
+                    }
+                }
+                this.style.border = "solid 4px green"
+            })
+        }
+        setInterval(() => {
+            for (let i = 0; i < myItems.length; i++) {
+                myItems[i].style.border = "none"
+            }
+            if (index == myItems.length) {
+                index = 0
+            }
+            myItems[index].style.border = "solid 4px green"
+            document.getElementById("display").innerHTML = myItems[index++].innerHTML
+        }, 1000);
+    </script>
+
+</body>
+
+</html>

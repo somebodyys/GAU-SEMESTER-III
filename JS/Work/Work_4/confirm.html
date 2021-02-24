@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            background: rgb(0, 0, 75);
+            margin-left: 300px;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="wrapper" id="1">
+
+
+    </div>
+
+    <script>
+        
+
+        choice = confirm("გამარჯობა, გსურთ გაიგოთ ვებ გვერდის შესახებ უფრო მეტი???")
+
+        if(choice){
+            result =`
+            <h1><span style="color: red;">გილოცავთ</span>, თქვენ სწორი არჩევანი გააკეთეთ!!!</h1>
+            <span style="color: yellow; font-style: italic;">ამ ვებგვერდზე მრავალი საინტერესო მაგალითი შეგხვდებათ ვებ გვერდის აწყობის შესახებ.</span> 
+            <br><br>
+            <span>ვებ გვერდის აწყობის ტექნოლოგიები : </span>
+            <ul>
+                <li>
+                    HTML - საფუძვლები
+                </li>
+                <li>
+                    CSS -სტილები
+                </li>
+                <li>
+                    javaScript - გაფორმება
+                </li>
+                <li>
+                    PHP - პროგრამირება
+                </li> 
+            </ul>
+
+            `
+        } else {
+            result = `
+            <h1 style="color: green;">დაინტერესდით ვებ გვერდების აწყობის ტექნოლოგიით.</h1>
+            <span style="text-shadow: red 2px 2px;">დაეუფლეთ მსოფლიოში ერთ-ერთ ყველაზე მოთხოვნად პროფესიას.</span>
+            <br><br>
+            <span style="color: yellow; font-style: italic;">ისწავლე და დასაქმდი!!</span> 
+            `
+        }   
+
+        document.getElementById("1").innerHTML = result;
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+.navbar-brand{
+    font-family: almaMono;
+    font-size: 40px;
+    color: #176150;
+    margin-left: 50px;
+}
+
+.navbar-brand:hover{
+    color:#176150;
+}
+.navbar-brand:focus{
+    color:#176150;
+}
+
+.getStarted{
+    background-color: #176150;
+    border-radius: 25px;
+    width: 150px;
+    align-self: center;
+}
+
+.getStarted:hover{
+    box-shadow: #176150 0px 0px 5px 3px;
+}
+
+.getStarted:hover a{
+    color: white;
+}
+
+.navbar{
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+}
+.nav-item{
+    margin-right: 15px;
+}
+
+.getStarted a{
+    color: white;
+}
+
+.navbar-nav{
+    font-family: BerlinSansFBRegular;
+    font-size: 18px;
+}
+
+#langBox{
+    margin: 10px;
+    border: none;
+    border-bottom: solid 2px #176150;
+}
+footer{
+    width: 100%;
+    padding: 20px;
+    border-top: #176150 4px solid;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 12px;
+}

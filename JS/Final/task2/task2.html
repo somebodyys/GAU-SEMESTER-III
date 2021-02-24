@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #wrapper{
+            margin: auto;
+            width: 700px;
+            height: 400px;
+            border: solid 1px black;
+            text-align: center;
+        }
+
+        form{
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            flex-direction: column;
+            height: 100%;
+            border: solid 1px red;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div id="wrapper">
+        <form action="">
+
+            <div id="rand">
+                <textarea name="out" id="out" cols="30" rows="5"></textarea>
+                <br>
+                <button type="button" onclick="generateRandom()">Generate</button>
+            </div>
+            
+
+            <div id="inside">
+                <input id="in" name="replace" type="text" placeholder="Replace Box">
+                <select name="" id="choice">
+                    <option value="a">a</option>
+                    <option value="r">r</option>
+                    <option value="g">g</option>
+                    <option value="ი">ი</option>
+                </select>
+                <button type="button" onclick="change()">replace</button>
+            </div>
+            
+        </form>
+    </div>
+    <script src="task2.js"></script>
+</body>
+
+</html>

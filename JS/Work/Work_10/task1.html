@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work 10</title>
+    <style>
+        #wrapper{
+            margin: auto;
+            width: 500px;
+            height: 500px;
+            border: solid 1px black;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-direction: column;
+        }
+
+        #imgCont{
+            border: solid 1px black;
+            width: 450px;
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        #slider{
+            width: 450px;
+            height: 250px;
+            border: solid 1px black;
+        }
+
+        img{
+            width: 100px;
+            height: 100px;
+        }
+        .prew{
+            cursor: pointer;
+        }
+
+        .prew:hover{
+            border: solid 2px green;
+        }
+
+        #slider img{
+            width: inherit;
+            height: inherit;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <h3>მარტივი სლაიდერის აწყობა</h3>
+        <div id="imgCont">
+            <div class="prew">
+                <img src="images/Analogy1.jpg" alt="">
+            </div>
+            <div class="prew">
+                <img src="images/hatrabbits-fishing.jpg" alt="">
+            </div>
+            <div class="prew">
+                <img src="images/random.jpg" alt="">
+            </div>
+            <div class="prew">
+                <img src="images/rare-combinaties.jpg" alt="">
+            </div>
+        </div>
+        <div id="slider">
+
+        </div>
+
+    </div>
+
+    <script>
+        var images = document.getElementsByClassName("prew")
+        for(let i = 0; i < images.length; i++){
+            images[i].addEventListener('mouseover', function(){
+                document.getElementById("slider").innerHTML = this.innerHTML
+            })
+        }
+    </script>
+
+</body>
+
+</html>

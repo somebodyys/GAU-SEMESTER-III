@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #wrapper{
+            width: 300px;
+            padding: 25px;
+            border: solid 1px gray;
+            border-radius: 15px;
+            margin: auto;
+            height: 250px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        #wrapper input{
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div id="wrapper">
+        <input type="text" placeholder="First Name" id="fname">
+        <input type="text" placeholder="Last Name" id="lname">
+        <input type="number" placeholder="Personal ID" id="id" >
+        <input type="date" placeholder="Registration Date" id="date">
+        <input type="email" placeholder="Email" id="email">
+        <button onclick="check()">check</button>
+
+
+        <script>
+            function id_valid_check(){
+                var id =  document.getElementById("id").value
+                if(Number.isInteger(parseInt(id)) && String(id).length == 11){
+                    document.getElementById("id").style.background = "green"
+                } else{
+                    document.getElementById("id").style.background = "red"
+                }
+                
+            }
+
+            function setRegistration(){
+                var currentDate = new Date();
+                document.getElementById("date").value = `${currentDate.getFullYear()}-${currentDate.getMonth()}-${currentDate.getDate()}`;
+            }
+
+            function check(){
+                id_valid_check()
+                setRegistration()
+                checkEmail()
+            }
+
+            function checkEmail(){
+                var email = document.getElementById("email").value
+                if(email.includes("@")){
+
+                    document.getElementById("email").style.background = "green"
+                }  else {
+                    document.getElementById("email").style.background = "red"
+                }
+            }
+        </script>
+
+    </div>
+
+</body>
+
+</html>

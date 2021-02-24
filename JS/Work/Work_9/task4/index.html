@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #wrapper{
+            width: 500px;
+            height: 600px;
+            margin: auto;
+            border: solid 1px black;
+            overflow: hidden;
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+    </div>
+
+    <script>
+
+        document.getElementById("wrapper").addEventListener("mousemove", function(e){
+            var x = e.clientX - 415;
+            var y = e.clientY - 35;
+            var width = 50;
+            var height = 50;
+
+            var ball = `<div id="ball" style="width:${width}px; height:${height}px; border-radius:50%; border:solid 1px red; background:blue;position: absolute; top:${y}px; left:${x}px;"></div>`
+
+            document.getElementById("wrapper").innerHTML = ball;
+            
+        })
+
+    </script>
+
+</body>
+
+</html>

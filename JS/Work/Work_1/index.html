@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="functions.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <ol>
+            <li id="1"></li>
+            <li id="2"></li>
+            <li id="3"></li>
+            <li id="4"></li>
+            <li id="5"></li>
+            <li id="6"></li>
+        </ol>
+
+    </div>
+    <script>
+        document.getElementById("1").innerHTML = decoration_1("This is task one", "task_1")
+        document.getElementById("2").innerHTML = return_sum(7, 9)
+        document.getElementById("3").innerHTML = text_size_maker("Text Size Maker", 25)
+        document.getElementById("4").innerHTML = table_builder(150, 150, "purple", 5)
+        document.getElementById("5").innerHTML = natural_number(1,10)
+        document.getElementById("6").innerHTML = better_table_builder(5,5,500,200, "green", 5)
+
+    </script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <canvas id="display" width="1250" height="500" style="border: solid 1px black;">
+
+    </canvas>
+    <script>
+ 
+        var ctx = document.getElementById("display").getContext("2d")
+
+        ///first smile
+        ctx.beginPath()
+        ctx.arc(100,100, 70, 0, 2*Math.PI)
+        ctx.fillStyle = "yellow"
+        ctx.fill()
+        ctx.stroke()
+        
+        
+
+        //mouth
+        ctx.beginPath()
+        ctx.arc(100,100, 55, 0, Math.PI)
+        ctx.stroke()
+
+        //left eye
+        ctx.beginPath()
+        ctx.arc(75,80, 10, 0, Math.PI * 2)
+        ctx.stroke()
+        ctx.fillStyle = "purple"
+        ctx.fill()
+
+        //right eye
+        ctx.beginPath()
+        ctx.arc(125,80, 10, 0, Math.PI * 2)
+        ctx.stroke()
+        ctx.fillStyle = "red"
+        ctx.fill()
+        
+
+
+        ///second smile
+        ctx.beginPath()
+        ctx.arc(300,100, 70, 0, 2*Math.PI)
+        ctx.stroke()
+        ctx.fillStyle = "yellow"
+        ctx.fill()
+
+        ctx.beginPath()
+        ctx.arc(300,135, 30, 0, Math.PI, true)
+        ctx.stroke()
+        
+
+        ctx.beginPath()
+        ctx.arc(275,80, 10, 0, Math.PI * 2)
+        ctx.stroke()
+        ctx.fillStyle = "blue"
+        ctx.fill()
+
+        ctx.beginPath()
+        ctx.arc(325,80, 10, 0, Math.PI * 2)
+        ctx.stroke()
+        ctx.fillStyle = "pink"
+        ctx.fill()
+
+
+        //thirs smile
+        ctx.beginPath()
+        ctx.arc(500,100, 70, 0, 2*Math.PI)
+        ctx.stroke()
+        ctx.fillStyle = "yellow"
+        ctx.fill()
+
+        ctx.beginPath()
+        ctx.arc(500,135, 30, 0, Math.PI * 2)
+        ctx.stroke()
+        ctx.fillStyle = "white"
+        ctx.fill()
+
+        ctx.beginPath()
+        ctx.arc(475,80, 10, 0, Math.PI * 2)
+        ctx.stroke()
+        ctx.fillStyle = "cyan"
+        ctx.fill()
+
+        ctx.beginPath()
+        ctx.arc(525,80, 10, 0, Math.PI * 2)
+        ctx.stroke()
+        ctx.fillStyle = "brown"
+        ctx.fill()
+
+        //fourth smile
+        ctx.beginPath()
+        ctx.arc(700,100, 70, 0, 2*Math.PI)
+        ctx.stroke()
+        ctx.fillStyle = "yellow"
+        ctx.fill()
+
+        ctx.beginPath()
+        ctx.moveTo(650,120)
+        ctx.lineTo(750, 120)
+        ctx.stroke()
+
+        ctx.beginPath()
+        ctx.moveTo(650,80)
+        ctx.lineTo(680, 80)
+        ctx.stroke()
+
+        ctx.beginPath()
+        ctx.moveTo(720,80)
+        ctx.lineTo(750, 80)
+        ctx.stroke()
+        
+
+
+        ctx.beginPath()
+        ctx.strokeRect(30, 200, 250, 250)
+
+        ctx.beginPath()
+        ctx.moveTo(80, 250)
+        ctx.lineTo(200, 250)
+        ctx.lineTo(80, 370)
+        ctx.closePath()
+        ctx.fillStyle = "black"
+        ctx.fill()
+        ctx.stroke()
+
+        ctx.beginPath()
+        ctx.moveTo(220, 280)
+        ctx.lineTo(220, 400)
+        ctx.lineTo(100,400)
+        ctx.closePath()
+        ctx.stroke()
+
+
+        ctx.beginPath()
+        var xStart = 450
+        var yStart = 200
+        var size = 240
+        var tile = size/8
+        var color = "white"
+
+        function swap(){
+            if(color == "black"){
+                color = "white"
+                ctx.fillStyle = color
+            } else{
+                color = "black"
+                ctx.fillStyle = color
+            }
+        }
+
+        ctx.strokeRect(xStart,yStart, size, size)
+        ctx.moveTo(xStart,yStart)
+        for(let i = 0; i < 8; i++){
+            for(let j = 0; j < 8; j++){
+                swap()
+                ctx.fillRect(xStart, yStart, tile, tile)
+                xStart += tile
+            }
+            xStart = 450
+            swap()
+            yStart += tile
+        }
+
+
+        ctx.beginPath()
+        ctx.strokeStyle = "red"
+        
+        ctx.strokeRect(750, 200, 240, 240)
+        setInterval(() => {
+            var x = 750
+            var y = 200
+            for(let i = 0; i < 6; i++){
+                for(let j = 0; j < 6; j++){
+                    ctx.beginPath()
+                    var randColor = `rgb(${Math.floor(Math.random() * 256)},${Math.floor(Math.random() * 256)},${Math.floor(Math.random() * 256)})`
+                    ctx.rect(x, y, 40, 40)
+                    ctx.fillStyle = randColor
+                    ctx.fill()
+                    x += 40 
+                }
+                x = 750
+                y += 40
+            }
+        }, 1000);
+        
+        
+
+
+    
+
+    </script>
+
+</body>
+
+</html>

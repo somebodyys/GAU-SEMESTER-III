@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work 7</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
+</head>
+
+<body>
+    <div id="wrapper">
+        <ul>
+            <li>
+                <div id="calendar">
+                    
+                    <div id="fastDisplay">
+                    <button onclick="previous()" id="pre">❮</button>
+                        <div id="fastDay">
+
+                        </div>
+                        <div id="fastMonth">
+
+                        </div>
+                        <div id="fastYear">
+                            <div id="year">
+
+                            </div>
+                            <div id="time">
+
+                            </div>
+                        </div>
+                        <button id="next" onclick="next()">❯</button>
+                    </div>
+                    
+                    <div id="fullMonth">
+                        <table id="innerCalendar">
+                        
+                        </table>
+
+                    </div>
+
+                </div>
+            </li>
+            <li id="task2">
+                <div style="border: solid 2px green; padding: 10px;">
+                    <h1>This is a H1</h1>
+                    <p>This is a paragraph</p>
+                    <div style="border: solid 2px red; background: lime;width: 200px; padding: 10px;">
+                        <input type="text" placeholder="this is a text box">
+                        <br><br>
+                        <button>this is a button</button>
+                    </div>
+                </div>
+                <br>
+                <div style="border: solid 2px green; padding: 10px; display: flex; justify-content: space-around;">
+                    <button onclick="parentN(document.getElementById('task2'))">ParentNode</button>
+                    <button onclick="nxtSibl(document.getElementById('task2'))">nextSibling</button>
+                    <button>previousSibling</button>
+                    <button onclick="fchild(document.getElementById('task2'))">firstChild</button>
+                    <button>lastChaild</button>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <script>
+        
+        date = new Date()
+        setCalendar(date)
+        
+    </script>
+    
+</body>
+
+</html>

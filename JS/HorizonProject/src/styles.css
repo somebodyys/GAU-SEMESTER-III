@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face{
+    font-family: almaMono;
+    src: url(assets/Fonts/AlmaMono/AlmaMono-Heavy.ttf);
+}
+
+@font-face{
+    font-family: BerlinSansFBRegular;
+    src: url(assets/Fonts/BerlinSansFBRegular/BerlinSansFBRegular.ttf);
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+p { line-height: 150%;}

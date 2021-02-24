@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="functions.js"></script>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <ol>
+            <li id="1"></li>
+            <li id="2"></li>
+            <li id="3">
+                <div class="wrapper" id="insert">
+                    <form>
+                        <label for="row">Rows :</label>
+                        <input type="number" placeholder="ROWS" id="row" value="3">
+                        <label for="col">Columns : </label>
+                        <input type="number" placeholder="COLUMNS" id="col" value="4"  max="4">
+                        <button type="button" onclick="make_action()">Random</button>
+                        <button onclick="clear()">Clear</button>
+                    </form>
+                    <br>
+
+                    <div id="test">
+
+                    </div>
+            
+                </div>
+            </li>
+        </ol>
+    </div>
+
+    <script>
+        document.getElementById("1").innerHTML = rounding(2.36, false)
+        document.getElementById("2").innerHTML = number_picker(5, 12, 10)
+        
+    </script>
+
+</body>
+
+</html>

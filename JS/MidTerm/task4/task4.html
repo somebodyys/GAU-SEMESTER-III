@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            width: 550px;
+            padding: 20px;
+            height: 300px;
+            border: solid 2px black;
+            background-color: silver;
+            border-radius: 10px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        #keyboard button{
+            width: 30px;
+            height: 30px;
+            margin-top: 10px;
+        }
+
+    </style>
+    
+</head>
+
+<body>
+
+    <div id="container">
+        <div id="in">
+            <input type="text" id="randDisplay">
+            <br><br>
+            <input type="text" id="enteredValue">
+
+        </div>
+
+        <div id="validation">
+            <button onclick="displayRand()">შემთხვევით სიმბოლოების ნაკრები</button>
+            <button onclick="getValid()">სიმბოლოების აკრების ნებართვა</button>
+            <button onclick="check()">შემოწმება</button>
+        </div>
+
+        <div id="keyboard">
+            <button class="keyboard">a</button>
+            <button class="keyboard">b</button>
+            <button class="keyboard">c</button>
+            <button class="keyboard">d</button>
+            <button class="keyboard">e</button>
+            <button class="keyboard">f</button>
+            <button class="keyboard">g</button>
+            <button class="keyboard">h</button>
+            <button class="keyboard">i</button>
+            <button class="keyboard">j</button>
+            <button class="keyboard">k</button>
+            <button class="keyboard">l</button>
+            <button class="keyboard">m</button>
+            <button class="keyboard">n</button>
+            <button class="keyboard">o</button>
+            <button class="keyboard">p</button>
+            <button class="keyboard">q</button>
+            <button class="keyboard">r</button>
+            <button class="keyboard">s</button>
+            <button class="keyboard">t</button>
+            <button class="keyboard">u</button>
+            <button class="keyboard">v</button>
+            <button class="keyboard">w</button>
+            <button class="keyboard">x</button>
+            <button class="keyboard">y</button>
+            <button class="keyboard">z</button>
+            <br>
+            <button class="keyboard">0</button>
+            <button class="keyboard">1</button>
+            <button class="keyboard">2</button>
+            <button class="keyboard">3</button>
+            <button class="keyboard">4</button>
+            <button class="keyboard">5</button>
+            <button class="keyboard">6</button>
+            <button class="keyboard">7</button>
+            <button class="keyboard">8</button>
+            <button class="keyboard">9</button>
+        </div>
+    </div>
+
+    <script>
+
+        function check(){
+            var randField = document.getElementById("randDisplay").value
+            var enteredField = document.getElementById("enteredValue").value
+
+            if(randField = enteredField){
+                document.getElementById("randDisplay").style.background = "green"
+                document.getElementById("enteredValue").style.background = "green"
+            } else{
+                document.getElementById("randDisplay").style.background = "red"
+                document.getElementById("enteredValue").style.background = "red"
+            }
+        }
+        function display(){
+            document.getElementById("enteredValue").value += this.innerHTML
+        }
+        function displayRand(){
+
+            var result = ``
+            var randLength = Math.floor(Math.random() * 9 + 3)
+            for(let i = 0; i < randLength; i++){
+                result += String.fromCharCode(Math.floor(Math.random() * (122 - 97 + 1) + 97))
+            }
+            document.getElementById("randDisplay").value = result;            
+        }
+
+        function getValid(){
+            var buttons = document.getElementsByClassName("keyboard")
+            for(let i = 0; i < buttons.length; i++){
+                buttons[i].disabled = false;
+            }
+        }
+
+        var buttons = document.getElementsByClassName("keyboard")
+        for(let i = 0; i < buttons.length; i++){
+            buttons[i].disabled = true;
+            buttons[i].addEventListener('click', display)  
+        }
+    </script>
+
+</body>
+
+</html>

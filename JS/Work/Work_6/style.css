@@ -1,0 +1,140 @@
+.wrapper {
+	width: 80%;
+	padding: 20px;
+	border: dashed black 1px;
+	border-radius: 15px;
+	margin: auto;
+}
+
+li {
+	margin: 50px;
+}
+
+input {
+	font-weight: bold;
+	margin: 20px;
+}
+
+label {
+	font-weight: bold;
+}
+
+.box {
+	width: inherit;
+	text-align: center;
+}
+
+#randBox{
+	background-color: lightblue;
+	padding: 15px;
+	border-radius: 15px;
+	margin: 10px auto;
+	box-shadow: gray 5px 5px 5px;
+	text-align: center;
+}
+
+.box button {
+	padding: 10px;
+	min-width: 70px;
+	height: 30px;
+	background-image: linear-gradient(to top, rgb(214, 214, 214), rgb(235, 235, 235));
+	border: none;
+	cursor: pointer;
+}
+
+
+#calculator{
+	width: 320px;
+	height: 520px;
+	margin: auto;
+	border-radius: 10px;
+	box-shadow: gray 0px 0px 20px 2px;
+}
+
+#output{
+	height: 120px;
+}
+
+#history{
+	text-align: right;
+	height: 20px;
+	margin: 0 20px;
+	padding-top: 20px;
+	font-size: 25px;
+	color: #919191;
+}
+
+#input{
+	text-align: right;
+	height: 60px;
+	margin: 10px 20px;
+	font-size: 40px;
+}
+#keyboard{
+	height: 400px;
+}
+.operator, .number, .empty{
+	width: 50px;
+	height: 50px;
+	margin: 15px;
+	float: left;
+	border-radius: 50%;
+	border: none;
+	font-size: 17px;
+}
+
+.operator:focus, .number:focus, .empty:focus{
+	outline: 0;
+}
+
+.number, .operator{
+	cursor: pointer;
+}
+
+.number:hover, .operator:hover{
+	background-color: rgb(206, 206, 206);
+}
+.number:active{
+	font-size: 25px;
+	background-color: #7d93e0;
+}
+
+.operator:active {
+	font-size: 25px;
+	background-color: #f08080;
+}
+
+#empty{
+	background-color: white;
+}
+#easy-percent{
+	width: 500px;
+	height: 250px;
+	box-shadow: gray 0px 0px 15px;
+	margin: auto;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+}
+
+#easy-percent input{
+	width: 150px;
+}
+.in{
+	text-align: center;
+}
+
+.out{
+	width: inherit;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	padding: 20px;
+}
+
+#gain, #total{
+	padding: 20px;
+	display: inline;
+}

@@ -1,0 +1,92 @@
+[
+   {
+      "TITLE" : "Green Lake",
+      "LOCATION" : "Adjara, Georgia",
+      "URL" : "../../assets/Pictures/Discover/greenLake.jpg",
+      "STARS" : "4.3",
+      "DIF" : "easy",
+      "LENGTH" : "8.6km" 
+   },
+
+   {
+      "TITLE" : "Toba",
+      "LOCATION" : "Samegrelo, Georgia",
+      "URL" : "../../assets/Pictures/Discover/toba.jpg",
+      "STARS" : "4.7",
+      "DIF" : "Hard",
+      "LENGTH" : "45km" 
+   },
+
+   {
+      "TITLE" : "Gomi",
+      "LOCATION" : "Adjara, Georgia",
+      "URL" : "../../assets/Pictures/Discover/gomi.jpg",
+      "STARS" : "4.9",
+      "DIF" : "Hard",
+      "LENGTH" : "24.5km" 
+   },
+
+   {
+      "TITLE" : "Mtirala",
+      "LOCATION" : "Adjara, Georgia",
+      "URL" : "../../assets/Pictures/Discover/mtirala.jpg",
+      "STARS" : "3.9",
+      "DIF" : "Medium",
+      "LENGTH" : "15km" 
+   },
+
+   {
+      "TITLE" : "Abudelauri",
+      "LOCATION" : "Dusheti, Georgia",
+      "URL" : "../../assets/Pictures/Discover/abudelauri.jpg",
+      "STARS" : "3.5",
+      "DIF" : "Easy",
+      "LENGTH" : "4km" 
+   },
+
+   {
+      "TITLE" : "Beshumi",
+      "LOCATION" : "Adjara, Georgia",
+      "URL" : "../../assets/Pictures/Discover/beshumi.jpg",
+      "STARS" : "4.2",
+      "DIF" : "Medium",
+      "LENGTH" : "30km" 
+   },
+
+   {
+      "TITLE" : "Bateti",
+      "LOCATION" : "Shida Qartli, Georgia",
+      "URL" : "../../assets/Pictures/Discover/bateti.jpg",
+      "STARS" : "4.2",
+      "DIF" : "Easy",
+      "LENGTH" : "3km" 
+   },
+
+   {
+      "TITLE" : "Shaori",
+      "LOCATION" : "Racha-Leechxumi, Georgia",
+      "URL" : "../../assets/Pictures/Discover/shaori.jpg",
+      "STARS" : "3.7",
+      "DIF" : "Easy",
+      "LENGTH" : "7.1km" 
+   },
+
+   {
+      "TITLE" : "Triala",
+      "LOCATION" : "Adjara, Georgia",
+      "URL" : "../../assets/Pictures/Discover/triala.jpg",
+      "STARS" : "4.0",
+      "DIF" : "Hard",
+      "LENGTH" : "40km" 
+   },
+
+   {
+      "TITLE" : "Kakhisi Lake",
+      "LOCATION" : "Borjomi, Georgia",
+      "URL" : "../../assets/Pictures/Discover/kakhisi.jpg",
+      "STARS" : "4.5",
+      "DIF" : "Medium",
+      "LENGTH" : "22km" 
+   }
+
+]

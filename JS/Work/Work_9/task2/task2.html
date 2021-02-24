@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #wrapper {
+            width: 500px;
+            height: 250px;
+            border: solid 1px black;
+            margin: auto;
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+    </div>
+
+    <script>
+
+        var box = {
+
+            width: 50,
+            height: 50,
+            x: 0,
+            y: 0,
+            speed: 50
+
+        }
+        window.addEventListener("keypress", function (key) {
+            //97 119 100 115
+            switch (key.keyCode) {
+
+                case 97:
+                    if (box.width - box.speed >= 50) {
+                        box.width -= box.speed
+                        draw(box)
+                    }
+                    break;
+                case 119:
+                    if (box.height - box.speed >= 50) {
+                        box.height -= box.speed
+                        draw(box)
+                    }
+                    break;
+                case 100:
+                    if (box.width + box.speed <= 500 - box.x) {
+                        box.width += box.speed
+                        draw(box)
+                    }
+                    break;
+                case 115:
+                    if (box.height + box.speed <= 250 - box.y) {
+                        box.height += box.speed
+                        draw(box)
+                    }
+                    break;
+                case 50:
+                    if (box.y + box.speed <= 250 - box.height) {
+                        box.y += box.speed
+                        draw(box)
+                    }
+                    break;
+                case 52:
+                    if (box.x - box.speed >= 0) {
+                        box.x -= box.speed
+                        draw(box)
+                    }
+                    break;
+                case 56:
+                    if (box.y - box.speed >= 0) {
+                        box.y -= box.speed
+                        draw(box)
+                    }
+                    break;
+                case 54:
+                    if (box.x + box.speed <= 500 - box.width) {
+                        box.x += box.speed
+                        draw(box)
+                    }
+                    break;
+            }
+
+        })
+
+        function clearAll() {
+            document.getElementById("wrapper").innerHTML = ""
+        }
+
+        function draw(obj) {
+            var width = obj.width
+            var height = obj.height
+            var x = obj.x
+            var y = obj.y
+            clearAll()
+            var randColor = `rgb(${Math.floor(Math.random() * 256)},${Math.floor(Math.random() * 256)},${Math.floor(Math.random() * 256)})`
+            var result = `<div style="width:${width}px; height: ${height}px; background-color: ${randColor}; position: absolute; left:${x}px; top:${y}px;"></div>`
+            document.getElementById("wrapper").innerHTML = result
+        }
+
+        draw(box)
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #wrapper {
+            width: 500px;
+            padding: 25px;
+            margin: auto;
+        }
+
+        td{
+            width: 150px;
+            height: 150px;
+            border: solid 1px gray;
+            text-align: center;
+            font-size: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+
+
+    </div>
+
+    <script>
+        function tableBuilder(rows, cols){
+            var result = `<table>`
+            
+            for(let i = 0; i < rows; i++){
+                result += `<tr>`
+                for(let j = 0; j < cols; j++){
+                    result += `<td>${Math.floor(Math.random() * 41 + 10)}</td>`
+                }
+                result += `</tr>`    
+            }
+
+            result += `</table>`
+
+            return result
+        }
+        
+        document.getElementById('wrapper').innerHTML = tableBuilder(3, 3)
+    </script>
+
+</body>
+
+</html>

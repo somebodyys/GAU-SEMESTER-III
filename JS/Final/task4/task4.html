@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #wrapper{
+            width: 700px;
+            height: 500px;
+            border: solid 1px black;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-direction: column;
+        }
+
+        #in{
+            border: solid 3px black;
+            background-color: gray;
+            width: 250px;
+            height: 170px;
+            text-align: center;
+            padding: 5px;
+        }
+
+        #out{
+            border: solid 3px black;
+            background-color: gray;
+            width: 350px;
+            height: 150px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-direction: column;
+        }
+        input{
+            width: 150px;
+        }
+
+        #result{
+            background-color: white;
+            width: 100px;
+            color: green;
+            text-align: center;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="wrapper">
+        <h4>დროის ფორმატის შემოწმება</h4>
+
+        <div id="in">
+            <label for="hour">საათები : </label>
+            <input type="number" value="7" id="h">
+            <br><br>
+            <label for="minute">წუთები : </label>
+            <input type="number" value="8" id="m">
+            <br><br>
+            <label for="second">წამები : </label>
+            <input type="number" value="11" id="s">
+            <br><br>
+            <button type="button" onclick="start()">შესრულება</button>
+        </div>
+
+        <div id="out">
+            <div id="hourRes"></div>
+            <div id="minResult"></div>
+            <div id="secondResult"></div>
+            <div id="result">00:00:00</div>
+        </div>
+    </div>
+    <script src="task4.js"></script>
+</body>
+
+</html>

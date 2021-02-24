@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="functions.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <ol>
+            <li id="1"></li>
+            <li id="2"></li>
+            <li id="3"></li>
+            <li id="4"></li>
+            <li id="5"></li>
+            <li>
+                <div class="box">
+                    <form>
+                        <span>სიტყვებში მინიმალური რაოდენობის სიმბოლო : </span><br>
+                        <input type="number" id="min_letter" value="3"> <br>
+                        <span>სიტყვებში მაქსიმალური რაოდენობის სიმბოლო : </span> <br>
+                        <input type="number" id="max_letter" value="8"> <br>
+                        <span>აბზაცში მინიმალური რაოდენობის სიტყვები : </span> <br>
+                        <input type="number" id="min_article" value="1"> <br>
+                        <span>აბზაცში მაქსიმალური რაოდენობის სიტყვები : </span> <br>
+                        <input type="number" id="max_article" value="50"> <br>
+                        <span>აბზაცების რაოდენობა : </span> <br>
+                        <input type="number" id="count_article" value="3"> <br>
+                        <span>ენის არჩევა : </span> <br> <br>
+                        <Select id="language">
+                            <option value="English">English</option>
+                            <option value="ქართული">ქართული</option>
+                        </Select>
+            
+                        <button type="button" onclick="generate()">გენერირება</button>
+                        <hr>
+                        <textarea name="result_field" id="result_field" cols="75" rows="20"></textarea>
+                    </form>
+                </div>
+            </li>
+            
+        </ol>
+    </div>
+
+    <script>
+
+        document.getElementById("1").innerHTML = charCounter("Tornike Kikacheishvili", "k");
+        document.getElementById("2").innerHTML = stringGenerator(50);
+        document.getElementById("3").innerHTML = articleGenerator(20, 4, 10);
+        document.getElementById("4").innerHTML = bad_string_filter("I love My dog, My dog Is best dog.", ["dog", "cat"])
+        document.getElementById("5").innerHTML = uniqueChars("I love Programming")
+    </script>
+
+</body>
+
+</html>

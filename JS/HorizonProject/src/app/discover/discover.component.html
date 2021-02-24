@@ -1,0 +1,39 @@
+<div id="wrapper">
+    <div id="cover">
+        <img src="../../assets/Pictures/Discover/cover.jpg" alt="">
+    </div>
+    <div id="filterWrapper">
+        {{'DISCOVER.TITLE' | translate}}
+    </div>
+    <div id="contentWrapper">
+        <div class="item" *ngFor="let item of placeList">
+            <div class="cover">
+                <div class="stars">
+                    <span>{{item.STARS}}</span>
+                    <img style="width: 25px;" src="../../assets/Pictures/Discover/star.png" alt="">
+                </div>
+                <img src="{{item.URL}}" alt="">
+            </div>
+            <div class="info">
+                <div class="main">
+                    <div class="location">
+                        {{item.TITLE}}
+                    </div>
+                    <div class="locationPlace">
+                        {{item.LOCATION}}
+                    </div>
+                </div>
+                <div class="details">
+                    <div class="dif">
+                        {{item.DIF}}
+                    </div>
+                    <div class="length">
+                        {{item.LENGTH}}
+                        <img style="width: 22px;" src="../../assets/Pictures/Discover/map-location.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

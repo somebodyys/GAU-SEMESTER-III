@@ -1,0 +1,22 @@
+.task_1{
+    text-decoration: underline;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.wrapper{
+    margin: auto;
+    width: 50%;
+    border: dashed 1px gray;
+    border-radius: 15px;
+    padding: 15px;
+    
+}
+
+.wrapper li{
+    margin: 30px;
+}
+
+table, td {
+    border: 1px solid black;
+}

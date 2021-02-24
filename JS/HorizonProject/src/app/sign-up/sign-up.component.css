@@ -1,0 +1,72 @@
+#wrapper{
+    width: 100%;
+    padding: 30px;
+    min-height: 785px;
+    background-image: url(../../assets/Pictures/Registration/hi-1.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#wrapper form{
+    width: 500px;
+    height: 650px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.inputs{
+    width: 75%;
+}
+#choice{
+    width:75%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.select{
+    width: 45%;
+}
+.submit{
+    background-color: #176150;
+    color: white;
+}
+
+.header{
+    font-size: 30px;
+    font-family: almaMono;
+    color:#176150;
+}
+
+#numberWrapper{
+    width: 350px;
+
+}
+.decors{
+    width: 80px;
+}
+
+#note{
+    margin-left: 300px;
+    color: gray;
+    font-size: 10px;
+    margin-top: -75px;
+    margin-bottom: 30px;
+    height: 20px;
+}
+
+@media screen and (max-width:892px){
+    #wrapper{
+        justify-content: center;
+    }
+    .decors{
+        width: 55px;
+    }
+}

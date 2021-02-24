@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body> 
+
+    <canvas id="canv" width="1250" height="500" style="border: solid 1px black;">
+
+    </canvas>
+
+    <script>
+        var ctx = document.getElementById("canv").getContext("2d");
+        
+
+        
+
+        ctx.beginPath();
+        ctx.arc(500, 330, 120, 0, 2*Math.PI)
+        ctx.fillStyle="lightBlue"
+        ctx.strokeStyle = "black"
+        ctx.fill()
+        ctx.stroke()
+
+        ctx.beginPath();
+        ctx.ellipse(500, 230, 150, 50, 0, 0, 2*Math.PI)
+        ctx.fillStyle="blue"
+        ctx.fill()
+        ctx.stroke()
+
+        ctx.beginPath();
+        ctx.ellipse(500, 100, 100, 30, 0, 0, 2*Math.PI)
+        ctx.lineTo(600, 200)
+        ctx.ellipse(500, 200, 100, 30, 0, 0,Math.PI)
+        ctx.lineTo(400, 100)
+        ctx.fillStyle="blue"
+        ctx.fill()
+        ctx.stroke()
+
+        ctx.beginPath();
+        ctx.moveTo(450, 300)
+        ctx.lineTo(430, 350)
+        ctx.lineTo(455, 350)
+        ctx.stroke()
+
+
+        ctx.beginPath();
+        ctx.ellipse(500, 300, 20, 10, 0, 0, 2*Math.PI)
+        ctx.stroke()
+
+        ctx.beginPath();
+        ctx.arc(490, 300, 7, 0, 2*Math.PI)
+        ctx.fillStyle = "black"
+        ctx.fill()
+
+
+        ctx.beginPath();
+        ctx.ellipse(420, 300, 20, 10, 0, 0, 2*Math.PI)
+        ctx.stroke()
+
+        ctx.beginPath();
+        ctx.arc(410, 300, 7, 0, 2*Math.PI)
+        ctx.fill()
+
+
+        ctx.beginPath();
+        ctx.ellipse(465, 390, 40, 20, 0, 0, 2*Math.PI)
+        ctx.stroke()
+        
+
+    </script>
+
+</body>
+
+
+
+</html>

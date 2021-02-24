@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .wrapper{
+            margin: auto;
+            width: 350px;
+            padding: 15px;
+            border: dashed 1px gray;
+            border-radius: 15px;
+    
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <input type="text" id="1">
+        <button type="button" onclick="check()">START</button>
+
+        <div class="result" id = "2">
+
+        </div>
+    </div>
+
+
+
+    <script>
+
+        georgianOwels = ["ა", "ი", "უ", "ე", "ო"]
+
+        function check(){
+            startText = document.getElementById("1").value
+            splited = startText.split("")
+            counterOwels = {}
+            counterTanxmovnebi = {}
+            splited.forEach(function(i){
+                if(georgianOwels.includes(i)){
+                    counterOwels[i] = (counterOwels[i] || 0) + 1;
+                } else {
+                    counterTanxmovnebi[i] = (counterTanxmovnebi[i] || 0) + 1;
+                }
+                
+            })
+
+            countO = 0
+            Object.keys(counterOwels).forEach(function(i){
+                countO += counterOwels[i]
+            })
+
+            allOwels = ``
+            Object.keys(counterOwels).forEach(function(i){
+                allOwels += `${i} `
+            })
+
+            result = ``
+            Object.keys(counterTanxmovnebi).forEach(function(i){
+                result += i
+            })
+
+
+            document.getElementById("2").innerHTML = `<br>ხმოვნების რაოდენობა : ${countO} <br>განსხვავებული ხმოვნები : ${allOwels} <br>სიტყვა ხმოვნების გარეშე : ${result}`
+            console.log(countO)
+            console.log(counterTanxmovnebi)
+        }
+        
+        
+    </script>
+
+</body>
+
+</html>

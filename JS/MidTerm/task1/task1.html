@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #wrapper{
+            margin: auto;
+            border: dotted 2px gray;
+            width: 450px;
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        #in{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            width: inherit;
+        }
+
+
+        #in input{
+            width: 90px;
+        }
+
+        #out{
+            margin-top: 30px;
+            width: 87%;
+            padding: 20px;
+            border: solid 1px gray;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="wrapper">
+        <div id="in">
+            <input type="number" placeholder="n" id="n">
+            <input type="number" placeholder="k" id="k">
+            <input type="number" placeholder="p" id="p">
+            <button onclick="generate()">GENERATE</button>
+        </div>
+
+        <div id="out">
+
+        </div>
+
+        <script>
+            function generate(){
+                var n = document.getElementById("n").value
+                var k = document.getElementById("k").value
+                var p = document.getElementById("p").value
+
+                var result = ``
+
+                while(n){
+
+                    var tempRand = Math.floor(Math.random() * (p - k + 1)  + k);
+                    if(tempRand % 2 != 0){
+                        result += `${tempRand}  `
+                        n--;
+                    }
+                }
+
+                document.getElementById("out").innerHTML = result;
+            }
+        </script>
+    </div>
+
+
+</body>
+
+</html>

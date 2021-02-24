@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <ol>
+            <li id="1"></li>
+            <li id="2">
+                <div class="clock" id="clock1">
+
+                </div>
+            </li>
+
+            <li id="3">
+
+            </li>
+
+            <li id="4">
+
+            </li>
+            <li id="5">
+
+            </li>
+        </ol>
+
+    </div>
+
+    <script>
+        date = new Date();
+        document.getElementById("1").innerHTML = ` ${date.getFullYear()}/${date.getMonth() + 1}/${date.getDate()} : ${date.getDay()} : ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}:${date.getMilliseconds()}`
+        setInterval(updateClock, 1000)
+        
+        document.getElementById("3").innerHTML = timeDiff(new Date(2016, 0), new Date())
+        document.getElementById("4").innerHTML = dayDiff(new Date((new Date()).getFullYear(), 0), new Date(2020, 27, 10))
+        document.getElementById("5").innerHTML = weekDiff(new Date((new Date()).getFullYear(), 0), new Date(2020, 27, 10))
+    </script>
+
+</body>
+
+</html>

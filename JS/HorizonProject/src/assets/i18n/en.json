@@ -1,0 +1,69 @@
+{
+    "WELCOME": {
+        "SLOGAN" : "Welcome to Horizon! You can Explore All Mountains Around The World Just One Click",
+        "SELECT" : "Select Language"
+    },
+
+    "NAVIGATION":{
+        "PAGE-1" : "Welcome",
+        "PAGE-2" : "Discover",
+        "PAGE-3" : "Sign In",
+        "PAGE-4" : "Getting Started" 
+    },
+
+    "CONTENT":{
+        "DISCOVER" : "Advantures and Discoveries has never been so accessable. Our New Platform will provide all nesseccery tools to discover, feel and enjoy living on our Planet.",
+        "MAPS" : "Horizon Is the Unique Idea to unite both people and all aspects of outdoor activities. We have everything you need. All Location Data, Details Maps(Both Live and Offline), Traking! You can record, follow and share routes. It's never been so easy and fun! ",
+        "SOCIAL" : "Community is one of the most Important aspects of outdoor activities. Whether you want to share your experience with friend or Professional Hiking Clubs. Ass Friens, Invite, Share you jounay and use all toolth for social platform all in one app. Lets built big and great community together."
+    },
+
+    "DOWNLOAD":{
+        "STATUS" : "COMING SOON...",
+        "TEXT" : "We are working hard to deliver Horizon. Soon available on both android and IOS!"
+    },
+
+    "COPYRIGHT": "All Rights Reserved",
+
+    "REGISTRATION": {
+        "TITLE": "Sign Up",
+        "EMAIL": "email",
+        "USERNAME": "username",
+        "PASSWORD": "password",
+        "RPASSWORD": "confirm password",
+        "CITY": "city",
+        "COUNTRY": "country",
+        "CODE": "code",
+        "PREFIX": "prefix",
+        "PHONENUM": "phone number",
+        "SUBMIT" : "Join Us!"
+    },
+
+    
+    "CITIES":{
+        "TBILISI": "Tbilisi",
+        "BATUMI" : "Batumi",
+        "QUTAISI" : "Qutaisi",
+        "OZURGETI" : "Ozurgeti",
+        "QOBULETI" : "Qobuleti"
+    },
+
+    "COUNTRIES" : {
+        "GEO" : "Georgia",
+        "USA" : "U.S.A",
+        "CANADA" : "Canada",
+        "UK" : "England"
+    },
+
+    "ERRORS" : {
+        "REQ" : "required!",
+        "EMAIL" : "Your email does not look right!",
+        "USERREQ" : "username is required!",
+        "PASS" : " Password is required! (Must have one letter, and one number!)",
+        "PASSNOTE" : "Must have one letter, and one number",
+        "CONFIRM" : "Confirm password doesn't match password!"
+    },
+
+    "DISCOVER" : {
+        "TITLE" : "Discover"
+    }
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1</title>
+
+    <style>
+        body{
+            background-color: lightgrey;
+        }
+
+        #wrapper{
+            width: 680px;
+            height: 350px;
+            border: solid 1px black;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 5px;
+            flex-wrap: wrap;
+        }
+
+        h4{
+            text-align: center;
+        }
+
+        .item{
+            width: 150px;
+            height: 150px;
+            background-color: brown;
+            margin: 10px;
+            overflow: hidden;
+        }
+
+        .item img{
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="stop()">Stop Refresh</button>
+    <button onclick="start()">Start Refresh</button>
+    <h4>Random Galery</h4>
+    <div id="wrapper">
+        <div class="item">
+            
+        </div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>

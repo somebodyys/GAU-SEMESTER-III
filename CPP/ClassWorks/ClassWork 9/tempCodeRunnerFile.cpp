@@ -1,0 +1,1 @@
+cout << "No Calculations!" << endl;

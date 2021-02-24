@@ -1,0 +1,79 @@
+#wrapper{
+    border: dotted 1px gray;
+    width: 700px;
+    padding: 30px;
+    border-radius: 20px;
+    margin: auto;
+}
+
+li{
+    margin: 50px;
+}
+
+#calendar{
+    width: 550px;
+    height: 550px;
+    box-shadow: rgb(51, 128, 51) 0px 0px 15px;
+    margin: auto;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    
+}
+
+#fastDisplay{
+    width: 80%;
+    height: 25%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#fastDay, #fastMonth, #fastYear{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#fastDay, #fastMonth{
+    font-size: 50px;
+}
+#fastYear{
+    font-size: 13px;
+    flex-direction: column;
+    margin-top: 4px;
+}
+
+#fullMonth{
+    height: 70%;
+    width: 500px;
+}
+table{
+    width: inherit;
+}
+th,td{
+    text-align: center;
+    width: 30px;
+    height: 50px;
+}
+
+#next, #pre{
+    width: 50px;
+    height: 50px;
+    background: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 25px;
+    cursor: pointer;
+    outline: none;
+    color: rgb(185, 185, 185);
+}
+
+#next:hover, #pre:hover{
+    color: rgb(49, 49, 49);
+}

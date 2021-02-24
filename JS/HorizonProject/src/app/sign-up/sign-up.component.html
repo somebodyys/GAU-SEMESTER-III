@@ -1,0 +1,89 @@
+
+<div id="wrapper">
+    
+    <form [formGroup]="myForm">
+        <mat-label class="header">{{'REGISTRATION.TITLE' | translate}}</mat-label>
+        <mat-form-field class="inputs">
+            <input matInput placeholder="{{'REGISTRATION.USERNAME' | translate}}" formControlName="username">
+            <mat-error>
+                {{'ERRORS.USERREQ' | translate}}
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field class="inputs">
+            <input matInput placeholder="{{'REGISTRATION.EMAIL' | translate}}" formControlName="email">
+            <mat-error>
+                {{'ERRORS.EMAIL' | translate }}
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field class="inputs">
+            <input (keyup)="checkStrength()" matInput type="password" placeholder="{{'REGISTRATION.PASSWORD' | translate}}" formControlName="password">
+            <mat-hint align="start">
+                {{'ERRORS.PASSNOTE' | translate }}
+            </mat-hint>
+            <mat-error>
+                {{'ERRORS.PASS' | translate}}
+            </mat-error>
+        </mat-form-field>
+        <span id="note">
+            {{strength}}
+        </span>
+        <mat-form-field class="inputs">
+            <input matInput type="password" placeholder="{{'REGISTRATION.RPASSWORD' | translate}}" formControlName="confirmPassword">
+            <mat-error>
+                {{'ERRORS.CONFIRM' | translate }}
+            </mat-error>
+        </mat-form-field>
+
+
+        <div id="choice">
+            <mat-form-field class="select">
+                <mat-select formControlName="country" placeholder="{{'REGISTRATION.COUNTRY' | translate }}">
+                    <mat-option *ngFor="let temp of country" [value]="temp.value">
+                        {{temp.viewValue}}
+                    </mat-option>
+                </mat-select>
+                <mat-error>
+                    {{'ERRORS.REQ' | translate }}
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="select">
+                <mat-select formControlName="city" placeholder="{{'REGISTRATION.CITY' | translate}}">
+                    <mat-option *ngFor="let temp of city" [value]="temp.value">
+                        {{temp.viewValue}}
+                    </mat-option>
+                </mat-select>
+                <mat-error>
+                    {{'ERRORS.REQ' | translate}}
+                </mat-error>
+            </mat-form-field>
+        </div>
+
+        <div id="numberWraper">
+            <mat-form-field class="decors">
+                <input matInput placeholder="{{'REGISTRATION.CODE' | translate}}" formControlName="countryCode">
+                <mat-error>
+                    *
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field class="decors">
+                <input matInput placeholder="{{'REGISTRATION.PREFIX' | translate }}" formControlName="prefix">
+                <mat-error>
+                    *
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="{{'REGISTRATION.PHONENUM' | translate }}" formControlName="phoneNumber">
+                <mat-error>
+                    {{'ERRORS.REQ' | translate }}
+                </mat-error>
+            </mat-form-field>
+
+        </div>
+        <button mat-raised-button type="submit" class="submit">{{'REGISTRATION.SUBMIT' | translate}}</button>
+    </form>
+</div>
+
+<!-- Value: {{myForm.value | json}} -->
+
+

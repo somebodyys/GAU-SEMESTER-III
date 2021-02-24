@@ -1,0 +1,34 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="welcome">Horizon</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto" style="text-align: center;">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="welcome">{{ 'NAVIGATION.PAGE-1' | translate}}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="discover">{{ 'NAVIGATION.PAGE-2' | translate}}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="sign-in">{{ 'NAVIGATION.PAGE-3' | translate}}</a>
+        </li>
+        <li class="nav-item getStarted">
+          <a class="nav-link" routerLink="download">{{ 'NAVIGATION.PAGE-4' | translate}}</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<router-outlet></router-outlet>
+<footer>
+  <span>Horizon © {{'COPYRIGHT' | translate}} 2021</span>
+  <label for="">
+    {{ 'WELCOME.SELECT' | translate}}
+    <select #langselect (change)="translate.use(langselect.value)" id="langBox">
+      <option *ngFor="let lang of translate.getLangs()" [value]="lang">{{lang}}</option>
+    </select>
+  </label>
+</footer>
